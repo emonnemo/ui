@@ -37,16 +37,52 @@ npm install @emonnemo/ui
 ### 3. Import the base theme in `app/globals.css`
 
 ```css
-@import "@emonnemo/ui/dist/styles/globals.css";
+@import "@emonnemo/ui/styles/globals.css";
 ```
 
 ### 4. Use components
 
 ```tsx
-import { Button, cn } from "@emonnemo/ui"
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  Input,
+  Label,
+  RadioField,
+  RadioGroup,
+  Text,
+  cn,
+} from "@emonnemo/ui"
 
 export default function Page() {
-  return <Button variant="outline">Hello</Button>
+  return (
+    <div className="grid gap-4">
+      <Text variant="h2">Account</Text>
+
+      <div className="grid gap-2">
+        <Label htmlFor="email">Email</Label>
+        <Input id="email" type="email" placeholder="you@example.com" />
+      </div>
+
+      <RadioGroup>
+        <RadioField name="plan" value="starter" label="Starter" />
+        <RadioField name="plan" value="pro" label="Pro" />
+      </RadioGroup>
+
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline">Open menu</Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Settings</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  )
 }
 ```
 
