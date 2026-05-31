@@ -1,5 +1,8 @@
 node_modules
 dist
+storybook-static
+.storybook-home
+debug-storybook.log
 .env
 .env.local
 *.tsbuildinfo

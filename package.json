@@ -21,7 +21,9 @@
     "build": "tsup && mkdir -p dist/styles && cp src/styles/globals.css dist/styles/globals.css",
     "dev": "tsup --watch",
     "lint": "eslint src --ext .ts,.tsx",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "storybook": "HOME=.storybook-home STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006",
+    "build-storybook": "HOME=.storybook-home STORYBOOK_DISABLE_TELEMETRY=1 storybook build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -31,9 +33,9 @@
     "url": "https://github.com/emonnemo/ui.git"
   },
   "peerDependencies": {
+    "next": "^14 || ^15",
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19",
-    "next": "^14 || ^15",
     "tailwindcss": "^4"
   },
   "dependencies": {
@@ -51,15 +53,24 @@
     "lucide-react": "^0.469.0",
     "react-hook-form": "^7.54.2",
     "tailwind-merge": "^2.6.0",
-    "zustand": "^5.0.3",
-    "zod": "^3.24.1"
+    "zod": "^3.24.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@tailwindcss/vite": "^4.3.0",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.7.0",
+    "storybook": "^8.6.14",
     "tsup": "^8.3.5",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5"
   },
   "keywords": [
     "ui",
