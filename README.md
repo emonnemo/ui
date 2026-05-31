@@ -93,7 +93,18 @@ npm install
 npm run dev       # watch mode
 npm run build     # production build
 npm run type-check
+npm run storybook # component docs
 ```
+
+## Storybook on Vercel
+
+This repo includes `vercel.json`, so importing it into Vercel will build Storybook with:
+
+```bash
+npm run build-storybook
+```
+
+Vercel should serve the generated `storybook-static` directory.
 
 ## Structure
 
