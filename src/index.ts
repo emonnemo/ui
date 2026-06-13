@@ -19,6 +19,7 @@ export {
 } from "@/components/ui/dropdown-menu";
 export { Input } from "@/components/ui/input";
 export { Progress, progressVariants, progressIndicatorVariants } from "@/components/ui/progress";
+export { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 export { Label, labelVariants } from "@/components/ui/label";
 export { Radio, RadioField, RadioGroup } from "@/components/ui/radio";
 export { Text, textVariants } from "@/components/ui/text";
